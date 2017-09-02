@@ -1,0 +1,63 @@
+.backgroundimage {
+  width: 100%; height: 100%; top: 0; left: 0;
+  background: url(images/aboutus/manwithamoviecamera.jpg) no-repeat center top; position: fixed; z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(12px);
+  filter: grayscale(100%);
+}
+
+.gridcontainer {
+  display: grid;
+  align-items: stretch;
+  margin-top: 50px;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas:
+  ". . ."
+  ". centergrid ."
+  ". . .";
+}
+
+.aboutus {
+  grid-area: centergrid;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 3%;
+}
+
+.aboutus h1 {
+  font-size: 4.3em;
+  color: #f4d742;
+}
+
+.aboutus span {
+  margin: 5%;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .gridcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  }
+
+  .textbox h4 {
+    font-size:1.5em;
+  }
+
+  .textbox h2 {
+    font-size:2.3em;
+  }
+
+  .textbox p {
+    font-size:1.1em;
+  }
+
+} /*end @media 767s*/

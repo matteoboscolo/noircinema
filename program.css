@@ -1,0 +1,173 @@
+.backgroundimage {
+  width: 100%; height: 100%; top: 0; left: 0;
+  background: url(images/program/suspiria.jpg) no-repeat center top; position: fixed; z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(12px);
+  filter: grayscale(100%);
+}
+
+.wrapgrid {
+    padding: 5%;
+}
+
+.gridcontainer {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "weekday weekday "
+  "film1 film1 ";
+  padding-bottom: 2%;
+}
+
+.gridmovie {
+  grid-area: film1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 3%;
+  grid-template-areas:
+  "cover title infotext buttongroup";
+}
+
+.gridmovie .cover {
+  grid-area: cover;
+  display: flex;
+  justify-content: center;
+
+}
+
+.gridmovie .cover img {
+  margin: 3%;
+  width: 200px;
+  height: 300px;
+}
+
+.gridmovie .title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+}
+
+.gridmovie .title h2 {
+  font-size: 2.5em;
+  color: #f4d742;
+  margin-right: 3%;
+}
+
+.gridmovie .title h4 {
+  font-size: 1.1em;
+    margin-right: 3%;
+}
+
+.gridmovie .infotext {
+  grid-area: infotext;
+  margin: 3%;
+}
+
+.gridmovie .buttongroup {
+  grid-area: buttongroup;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+
+.gridmovie .buttongroup button {
+  margin: 3%;
+
+}
+
+.weekday {
+  grid-area: weekday;
+  color: black;
+  background-color: #f4d742;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.weekday a {
+  text-decoration: none;
+}
+
+
+
+.weekday .active{
+  color: black;
+}
+
+.weekday .active:hover {
+  color: #d6b306;
+}
+
+.weekday .inactive{
+  color: #d6b306;
+}
+
+.closed img{
+  width: 60%;
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .wrapgrid {
+    margin-top: 50px;
+    padding: 3%;
+  }
+
+
+  .gridcontainer {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "weekday"
+  "film1";
+
+  }
+
+  .gridmovie {
+    grid-area: film1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 3%;
+    grid-template-areas:
+    "cover title "
+    "infotext buttongroup";
+  }
+
+  .gridmovie .cover img {
+    margin: 2%;
+    width: 173px;
+    height: 250px;
+  }
+
+  .textbox h4 {
+    font-size:1.5em;
+  }
+
+  .textbox h2 {
+    font-size:2.3em;
+  }
+
+  .textbox p {
+    font-size:1.1em;
+  }
+
+} /*end @media 767s*/

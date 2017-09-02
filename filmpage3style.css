@@ -1,0 +1,180 @@
+/* span, li, option, p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+} */
+
+.backgroundimage {
+  width: 100%; height: 100%; top: 0; left: 0;
+  background: url(images/3/screen3.jpg) no-repeat center top; position: fixed; z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(12px);
+  filter: grayscale(100%);
+}
+
+.gridcontainer {
+  display: grid;
+  margin-top: 50px;
+  margin: 5% 2% 3% 2%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 270px auto auto;
+  grid-gap: 1em;
+  grid-template-areas:
+  "title image image"
+  "info incipit time"
+  ". . trailer";
+}
+
+
+.gridcontainer .title {
+  grid-area: title;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.gridcontainer .title .titletext {
+    margin: 5% 5% 5% 5%;
+}
+
+.gridcontainer h2 {
+  font-size: 6em;
+  color: white;
+}
+
+.gridcontainer h4 {
+  color: #d6b306;
+  font-size: 2em;
+  margin-bottom: 1%;
+}
+
+.gridcontainer .image {
+  grid-area: image;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gridcontainer .image img{
+  width: 100%;
+  height: auto;
+  margin-top: -20%;
+}
+
+
+.gridcontainer .info {
+  grid-area: info;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+}
+
+.gridcontainer .info .infotext{
+  margin: 5%;
+}
+
+.gridcontainer .info .imdbRatingPlugin{
+  align-items: center;
+}
+
+.gridcontainer .incipit {
+  grid-area: incipit;
+  background-color: black;
+  color: white;
+  height: auto;
+  border-radius: 5px;
+}
+
+.gridcontainer .incipit .incipittext{
+  margin: 5%;
+  text-align: justify;;
+}
+
+
+.gridcontainer .trailer {
+  grid-area: trailer;
+  color: black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gridcontainer .trailer iframe{
+  height: inherit;
+  width: inherit;
+  border-radius: 5px;
+}
+
+
+.gridcontainer .time {
+  grid-area: time;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.gridcontainer .time .timetable{
+  margin: 5%;
+}
+
+.gridcontainer .time .selectmovie{
+  margin: 5%;
+}
+
+.gridcontainer .time .selectmovie span{
+  color: white;
+}
+
+.gridcontainer .time .selectmovie select{
+  color: black;
+}
+
+.gridcontainer .time .selectmovie .bookingbox{
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: space-between; /* Safari 6.1+ */
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+@media screen and (max-width: 1290px) {
+  .gridcontainer h2 {
+    font-size:4.3em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .gridcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 60px 2% 2% 2%;
+  grid-template-areas:
+  "title"
+  "image"
+  "incipit"
+  "trailer"
+  "info"
+  "time";
+  }
+
+
+  .gridcontainer .trailer {
+    grid-area: trailer;
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .gridcontainer .trailer iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+} /*end @media 767s*/
