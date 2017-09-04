@@ -121,6 +121,12 @@
   width: 60%;
 }
 
+#closed {
+  display: flex;
+  align-items: center;
+
+}
+
 @media screen and (max-width: 767px) {
 
 
@@ -156,11 +162,8 @@
   }
 
   .gridmovie .title {
-    grid-area: title;
-    display: block;
-    display: flex;
-    align-items: center;
-    margin: 3%;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .gridmovie .cover img {
