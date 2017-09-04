@@ -1,3 +1,8 @@
+.body {
+  overflow-x: hidden;
+
+}
+
 .backgroundimage {
   width: 100%; height: 100%; top: 0; left: 0;
   background: url(images/program/suspiria.jpg) no-repeat center top; position: fixed; z-index: -1;
@@ -76,17 +81,15 @@
 
 .gridmovie .buttongroup {
   grid-area: buttongroup;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 1%;
 }
 
 
 .gridmovie .buttongroup button {
   margin: 3%;
-
 }
+
+
 
 .weekday {
   grid-area: weekday;
