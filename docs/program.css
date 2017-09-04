@@ -1,6 +1,5 @@
 .body {
   overflow-x: hidden;
-
 }
 
 .backgroundimage {
@@ -15,7 +14,8 @@
 }
 
 .wrapgrid {
-    padding: 5%;
+  overflow-x: hidden;
+  padding: 5%;
 }
 
 .gridcontainer {
@@ -153,6 +153,14 @@
     grid-template-areas:
     "cover title "
     "infotext buttongroup";
+  }
+
+  .gridmovie .title {
+    grid-area: title;
+    display: block;
+    display: flex;
+    align-items: center;
+    margin: 3%;
   }
 
   .gridmovie .cover img {
